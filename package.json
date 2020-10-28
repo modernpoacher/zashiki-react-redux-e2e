@@ -1,0 +1,51 @@
+{
+  "name": "@modernpoacher/zashiki-react-redux-e2e",
+  "version": "1.0.0",
+  "description": "E2E: UI Application Server for Zashiki",
+  "private": true,
+  "main": "./index.js",
+  "author": "Jonathan Perry for Modern Poacher Limited <modernpoacher@modernpoacher.com>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=12.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/modernpoacher/zashiki-react-redux-e2e.git"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=production mocha spec --recursive -r @babel/register",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "pre-commit": "npm run lint"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "debug": "^4.2.0",
+    "mocha": "^8.2.0",
+    "puppeteer": "^5.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "core-js": "^3.6.5",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^15.0.1",
+    "eslint-import-resolver-babel-module": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  }
+}
