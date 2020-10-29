@@ -1,0 +1,1 @@
+Required for `page.screenshot()`

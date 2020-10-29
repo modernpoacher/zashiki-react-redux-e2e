@@ -1,0 +1,25 @@
+.DS_Store
+
+**/node_modules/**/*
+**/npm-debug.log
+
+node_modules
+
+public/assets/js
+
+*.env
+!config.env
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc
+
+# Configuration
+config.env
+config.json
+config/server
+
+# Execution
+.screenshots/*.png

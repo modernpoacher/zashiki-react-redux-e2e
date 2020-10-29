@@ -1,0 +1,24 @@
+.DS_Store
+
+.circleci
+.github
+
+.editorconfig
+.eslintignore
+.eslintrc
+
+*.sh
+
+gulpfile.js
+
+# NPM
+.npmignore
+.npmrc
+
+# Deps
+.depsrc
+
+# Configuration
+config.env
+config.json
+config/server
