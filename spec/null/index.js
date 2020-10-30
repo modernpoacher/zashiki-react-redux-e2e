@@ -269,7 +269,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/null-enum-1.png' })
+        await page.screenshot({ path: '.screenshots/null-any-of-1.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null (Any Of)'))
@@ -286,7 +286,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
 
           await page.click('.cog input[type="radio"][value="0"]')
 
-          await page.screenshot({ path: '.screenshots/null-enum-2.png' })
+          await page.screenshot({ path: '.screenshots/null-any-of-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -295,7 +295,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/null-enum-3.png' })
+          await page.screenshot({ path: '.screenshots/null-any-of-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))

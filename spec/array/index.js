@@ -735,7 +735,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/array-array-object-7.png' })
+          await page.screenshot({ path: '.screenshots/array-array-object-6.png' })
         })
 
         it('Returns to the same url', async () => expect(await getLocationHref(page)).to.equal(ROUTE))
@@ -2003,7 +2003,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/array-number-any-of-array-1.png' })
+        await page.screenshot({ path: '.screenshots/array-number-one-of-array-1.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Array (Number - One Of - Array)'))
@@ -2020,7 +2020,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
           await page.click('.cog input[type="radio"][value="1"]')
 
-          await page.screenshot({ path: '.screenshots/array-number-any-of-array-2.png' })
+          await page.screenshot({ path: '.screenshots/array-number-one-of-array-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -2029,7 +2029,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/array-number-any-of-array-3.png' })
+          await page.screenshot({ path: '.screenshots/array-number-one-of-array-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -2051,7 +2051,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/array-number-any-of-object-1.png' })
+        await page.screenshot({ path: '.screenshots/array-number-one-of-object-1.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Array (Number - One Of - Object)'))
@@ -2068,7 +2068,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
           await page.click('input[type="radio"][value="1"]')
 
-          await page.screenshot({ path: '.screenshots/array-number-any-of-object-2.png' })
+          await page.screenshot({ path: '.screenshots/array-number-one-of-object-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -2077,7 +2077,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/array-number-any-of-object-3.png' })
+          await page.screenshot({ path: '.screenshots/array-number-one-of-object-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -2232,7 +2232,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-array-number-array-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-array-number-array-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Array (Number - Array)'))

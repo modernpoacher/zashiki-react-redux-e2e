@@ -343,7 +343,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-one-of-2.png' })
+          await page.screenshot({ path: '.screenshots/number-one-of-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -556,7 +556,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-enum-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-number-enum-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(2) h2', getTextContent)).to.equal('Number (Enum)'))
@@ -644,7 +644,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-one-of-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-number-one-of-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(4) h2', getTextContent)).to.equal('Number (One Of)'))

@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production mocha spec --recursive -r @babel/register",
+    "clean": "rimraf .screenshots/*.png",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "pre-commit": "npm run lint"
@@ -24,7 +25,8 @@
     "cross-env": "^7.0.2",
     "debug": "^4.2.0",
     "mocha": "^8.2.0",
-    "puppeteer": "^5.4.1"
+    "puppeteer": "^5.4.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",

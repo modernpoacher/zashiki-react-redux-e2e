@@ -350,7 +350,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
           await input.click({ clickCount: 3 })
           await page.type('.cog:nth-of-type(4) input[type="text"]', 'null')
 
-          await page.screenshot({ path: '.screenshots/object-array-array-4.png' })
+          await page.screenshot({ path: '.screenshots/object-array-array-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -359,7 +359,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/object-array-array-5.png' })
+          await page.screenshot({ path: '.screenshots/object-array-array-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -1335,7 +1335,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
               await page.click('.sprocket:nth-of-type(3) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-object-object-array-array-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-array-change-1.png' })
 
               await page.evaluate(() => { document.querySelector('.cog:nth-of-type(1) input[type="text"]').scrollIntoView() })
 
@@ -1361,7 +1361,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
               await input.click({ clickCount: 3 })
               await page.type('.cog:nth-of-type(4) input[type="text"]', 'null')
 
-              await page.screenshot({ path: '.screenshots/summary-object-object-array-array-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-array-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -1370,7 +1370,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-object-object-array-array-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-array-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Object (Array - Array)'))
@@ -1483,7 +1483,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
               await input.click({ clickCount: 3 })
               await page.type('.cog input[type="text"]', '2')
 
-              await page.screenshot({ path: '.screenshots/summary-object-array-object-numer-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-object-number-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -1492,7 +1492,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-object-array-object-numer-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-object-number-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(5) h2', getTextContent)).to.equal('Object (Array - Object - Number)'))
@@ -1575,7 +1575,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
               await input.click({ clickCount: 3 })
               await page.type('.cog input[type="text"]', 'null')
 
-              await page.screenshot({ path: '.screenshots/summary-object-array-object-null-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-object-null-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -1584,7 +1584,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-object-array-object-null-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-object-array-object-null-change-3.png' })
             })
 
             it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(7) h2', getTextContent)).to.equal('Object (Array - Object - Null)'))

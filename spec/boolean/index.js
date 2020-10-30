@@ -389,7 +389,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
-        await page.screenshot({ path: '.screenshots/boolean-all-of-8.png' })
+        await page.screenshot({ path: '.screenshots/boolean-all-of-9.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Boolean (All Of)'))

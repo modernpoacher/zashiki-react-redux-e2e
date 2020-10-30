@@ -375,7 +375,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
               await page.click('.sprocket:nth-of-type(1) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-string-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-string-change-1.png' })
 
               await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
