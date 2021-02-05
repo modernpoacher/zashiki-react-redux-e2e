@@ -21,7 +21,7 @@
     "pre-commit": "npm run lint"
   },
   "dependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.0",
     "cross-env": "^7.0.3",
     "debug": "^4.3.1",
     "mocha": "^8.2.1",
