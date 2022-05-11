@@ -1,20 +1,23 @@
+# Node
+node_modules
+
+# Mac
 .DS_Store
 
-**/node_modules/**/*
-**/npm-debug.log
+# User-defined NPM configuration
+.npmrc
+.npmignore
 
-node_modules
+# User-defined NVM configuration
+.nvmrc
+
+# Deps
+.depsrc
 
 public/assets/js
 
 *.env
 !config.env
-
-# User-defined NPM configuration
-.npmrc
-
-# User-defined NVM configuration
-.nvmrc
 
 # Configuration
 config.env
