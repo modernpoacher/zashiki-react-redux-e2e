@@ -29,10 +29,10 @@
     "rimraf": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.21.4",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.5",
     "@babel/eslint-parser": "^7.21.3",
-    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
     "@babel/register": "^7.21.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "core-js": "^3.30.1",
