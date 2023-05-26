@@ -25,14 +25,14 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "mocha": "^10.2.0",
-    "puppeteer": "^20.3.0",
+    "puppeteer": "^20.4.0",
     "rimraf": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.21.8",
+    "@babel/core": "^7.22.1",
     "@babel/eslint-parser": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-env": "^7.22.2",
     "@babel/register": "^7.21.0",
     "babel-plugin-module-resolver": "^5.0.0",
     "core-js": "^3.30.2",
