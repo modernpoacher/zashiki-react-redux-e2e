@@ -1,6 +1,6 @@
 const debug = require('debug')
 
-const log = debug('zashiki:e2e')
+const log = debug('zashiki/e2e')
 
 const {
   env: {
