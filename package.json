@@ -23,7 +23,7 @@
     "boolean": "cross-env NODE_ENV=production mocha spec/boolean --recursive --verbose",
     "null": "cross-env NODE_ENV=production mocha spec/null --recursive --verbose",
     "clean": "rimraf .screenshots/*.png",
-    "lint": "eslint . --ext .mjs --ext .cjs",
+    "lint": "eslint . --ext .mjs,.cjs",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky install"
   },
@@ -41,9 +41,6 @@
     "core-js": "^3.31.0",
     "eslint": "^8.43.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3"
   }
 }
