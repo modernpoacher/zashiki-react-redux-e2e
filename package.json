@@ -32,10 +32,10 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "mocha": "^10.2.0",
-    "puppeteer": "^20.7.4"
+    "puppeteer": "^20.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.7",
+    "@babel/core": "^7.22.8",
     "@babel/eslint-parser": "^7.22.7",
     "@babel/preset-env": "^7.22.7",
     "core-js": "^3.31.1",
