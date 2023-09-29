@@ -32,11 +32,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "chai": "^4.3.9",
+    "chai": "^4.3.10",
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "mocha": "^10.2.0",
-    "puppeteer": "^21.3.5"
+    "puppeteer": "^21.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
