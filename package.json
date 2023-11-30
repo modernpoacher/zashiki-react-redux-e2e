@@ -39,9 +39,9 @@
     "puppeteer": "^21.5.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.3",
+    "@babel/core": "^7.23.5",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-env": "^7.23.5",
     "core-js": "^3.33.3",
     "eslint": "^8.54.0",
     "eslint-config-standard": "^17.1.0",
