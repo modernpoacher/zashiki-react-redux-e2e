@@ -38,7 +38,7 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
 
   let browser
 
-  before(async () => { browser = await puppeteer.launch({ ignoreHTTPSErrors: true }) })
+  before(async () => { browser = await puppeteer.launch({ ignoreHTTPSErrors: true, headless: 'new' }) })
 
   after(async () => await browser.close())
 

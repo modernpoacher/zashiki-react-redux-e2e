@@ -25,7 +25,7 @@ const EMBARK = 'https://localhost:5001/embark-stage'
 const DEBARK = 'https://localhost:5001/debark-stage'
 const CONFIRM = 'https://localhost:5001/confirm-stage'
 
-describe('@modernpoacher/zashiki-react-redux/number', () => {
+describe('@modernpoacher/zashiki-react-redux/null', () => {
   before(() => {
     const {
       env: {
@@ -38,7 +38,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
   let browser
 
-  before(async () => { browser = await puppeteer.launch({ ignoreHTTPSErrors: true }) })
+  before(async () => { browser = await puppeteer.launch({ ignoreHTTPSErrors: true, headless: 'new' }) })
 
   after(async () => await browser.close())
 
@@ -73,7 +73,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
     })
   })
 
-  describe('Number', () => {
+  describe('Null', () => {
     let page
 
     before(async () => {
@@ -82,11 +82,11 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       await page.goto(EMBARK, { waitUntil: 'load' })
       await page.waitForTimeout(EMBARK_GRACE)
 
-      await page.screenshot({ path: '.screenshots/embark-number-1.png' })
+      await page.screenshot({ path: '.screenshots/embark-null-1.png' })
 
       await page.evaluate(() => {
         const index = Array.from(document.querySelectorAll('.cog label .text-content'))
-          .findIndex(({ textContent = '' }) => textContent.trim() === 'Number')
+          .findIndex(({ textContent = '' }) => textContent.trim() === 'Null')
 
         const array = Array.from(document.querySelectorAll('.cog input[type="radio"]'))
         const radio = array[index]
@@ -96,7 +96,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
         }
       })
 
-      await page.screenshot({ path: '.screenshots/embark-number-2.png' })
+      await page.screenshot({ path: '.screenshots/embark-null-2.png' })
 
       await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -105,32 +105,32 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
       await page.evaluate(() => { window.scrollTo(0, 0) })
 
-      await page.screenshot({ path: '.screenshots/embark-number-3.png' })
+      await page.screenshot({ path: '.screenshots/embark-null-3.png' })
     })
 
-    describe('Number - Number', () => {
-      const ROUTE = 'https://localhost:5001/number/number'
+    describe('Null - Null', () => {
+      const ROUTE = 'https://localhost:5001/null/null'
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-1.png' })
+        await page.screenshot({ path: '.screenshots/null-1.png' })
       })
 
       after(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-7.png' })
+        await page.screenshot({ path: '.screenshots/null-7.png' })
 
         await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
         const input = await page.$('.cog input[type="text"]')
         await input.click({ clickCount: 3 })
-        await page.type('.cog input[type="text"]', '1')
+        await page.type('.cog input[type="text"]', 'null')
 
-        await page.screenshot({ path: '.screenshots/number-8.png' })
+        await page.screenshot({ path: '.screenshots/null-8.png' })
 
         await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -139,12 +139,12 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
-        await page.screenshot({ path: '.screenshots/number-9.png' })
+        await page.screenshot({ path: '.screenshots/null-9.png' })
       })
 
-      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Number'))
+      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null'))
 
-      it('Has a Number component', async () => expect(await page.$('.cog input[type="text"]')).not.to.be.null)
+      it('Has a Null component', async () => expect(await page.$('.cog input[type="text"]')).not.to.be.null)
 
       describe('Input is valid', () => {
         before(async () => {
@@ -152,9 +152,9 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           const input = await page.$('.cog input[type="text"]')
           await input.click({ clickCount: 3 })
-          await page.type('.cog input[type="text"]', '1')
+          await page.type('.cog input[type="text"]', 'null')
 
-          await page.screenshot({ path: '.screenshots/number-2.png' })
+          await page.screenshot({ path: '.screenshots/null-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -163,7 +163,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-3.png' })
+          await page.screenshot({ path: '.screenshots/null-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -182,7 +182,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
           await page.goto(ROUTE, { waitUntil: 'load' })
           await page.waitForTimeout(ROUTE_GRACE)
 
-          await page.screenshot({ path: '.screenshots/number-4.png' })
+          await page.screenshot({ path: '.screenshots/null-4.png' })
 
           await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
@@ -190,7 +190,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
           await input.click({ clickCount: 3 })
           await page.type('.cog input[type="text"]', 'string')
 
-          await page.screenshot({ path: '.screenshots/number-5.png' })
+          await page.screenshot({ path: '.screenshots/null-5.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -199,7 +199,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-6.png' })
+          await page.screenshot({ path: '.screenshots/null-6.png' })
         })
 
         it('Returns to the same url', async () => expect(await getLocationHref(page)).to.equal(ROUTE))
@@ -214,17 +214,17 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       })
     })
 
-    describe('Number - Number (Enum)', () => {
-      const ROUTE = 'https://localhost:5001/number/number-enum'
+    describe('Null - Null (Enum)', () => {
+      const ROUTE = 'https://localhost:5001/null/null-enum'
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-enum-1.png' })
+        await page.screenshot({ path: '.screenshots/null-enum-1.png' })
       })
 
-      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Number (Enum)'))
+      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null (Enum)'))
 
       it('Has a Radios component', async () => {
         const nodeList = await page.$$('.cog input[type="radio"]')
@@ -234,11 +234,11 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
       describe('Input', () => {
         before(async () => {
-          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="1"]').scrollIntoView() })
+          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-          await page.click('.cog input[type="radio"][value="1"]')
+          await page.click('.cog input[type="radio"][value="0"]')
 
-          await page.screenshot({ path: '.screenshots/number-enum-2.png' })
+          await page.screenshot({ path: '.screenshots/null-enum-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -247,7 +247,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-enum-3.png' })
+          await page.screenshot({ path: '.screenshots/null-enum-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -262,17 +262,17 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       })
     })
 
-    describe('Number - Number (Any Of)', () => {
-      const ROUTE = 'https://localhost:5001/number/number-any-of'
+    describe('Null - Null (Any Of)', () => {
+      const ROUTE = 'https://localhost:5001/null/null-any-of'
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-any-of-1.png' })
+        await page.screenshot({ path: '.screenshots/null-any-of-1.png' })
       })
 
-      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Number (Any Of)'))
+      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null (Any Of)'))
 
       it('Has a Radios component', async () => {
         const nodeList = await page.$$('.cog input[type="radio"]')
@@ -282,11 +282,11 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
       describe('Input', () => {
         before(async () => {
-          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="1"]').scrollIntoView() })
+          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-          await page.click('.cog input[type="radio"][value="1"]')
+          await page.click('.cog input[type="radio"][value="0"]')
 
-          await page.screenshot({ path: '.screenshots/number-any-of-2.png' })
+          await page.screenshot({ path: '.screenshots/null-any-of-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -295,7 +295,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-any-of-3.png' })
+          await page.screenshot({ path: '.screenshots/null-any-of-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -310,17 +310,17 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       })
     })
 
-    describe('Number - Number (One Of)', () => {
-      const ROUTE = 'https://localhost:5001/number/number-one-of'
+    describe('Null - Null (One Of)', () => {
+      const ROUTE = 'https://localhost:5001/null/null-one-of'
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-one-of-1.png' })
+        await page.screenshot({ path: '.screenshots/null-one-of-1.png' })
       })
 
-      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Number (One Of)'))
+      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null (One Of)'))
 
       it('Has a Radios component', async () => {
         const nodeList = await page.$$('.cog input[type="radio"]')
@@ -330,11 +330,11 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
       describe('Input', () => {
         before(async () => {
-          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="1"]').scrollIntoView() })
+          await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-          await page.click('.cog input[type="radio"][value="1"]')
+          await page.click('.cog input[type="radio"][value="0"]')
 
-          await page.screenshot({ path: '.screenshots/number-one-of-2.png' })
+          await page.screenshot({ path: '.screenshots/null-one-of-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -343,7 +343,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-one-of-3.png' })
+          await page.screenshot({ path: '.screenshots/null-one-of-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -358,29 +358,29 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       })
     })
 
-    describe('Number - Number (All Of)', () => {
-      const ROUTE = 'https://localhost:5001/number/number-all-of'
+    describe('Null - Null (All Of)', () => {
+      const ROUTE = 'https://localhost:5001/null/null-all-of'
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-all-of-1.png' })
+        await page.screenshot({ path: '.screenshots/null-all-of-1.png' })
       })
 
       after(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
         await page.waitForTimeout(ROUTE_GRACE)
 
-        await page.screenshot({ path: '.screenshots/number-all-of-7.png' })
+        await page.screenshot({ path: '.screenshots/null-all-of-7.png' })
 
         await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
         const input = await page.$('.cog input[type="text"]')
         await input.click({ clickCount: 3 })
-        await page.type('.cog input[type="text"]', '1')
+        await page.type('.cog input[type="text"]', 'null')
 
-        await page.screenshot({ path: '.screenshots/number-all-of-8.png' })
+        await page.screenshot({ path: '.screenshots/null-all-of-8.png' })
 
         await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -389,12 +389,12 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
-        await page.screenshot({ path: '.screenshots/number-all-of-9.png' })
+        await page.screenshot({ path: '.screenshots/null-all-of-9.png' })
       })
 
-      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Number (All Of)'))
+      it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Null (All Of)'))
 
-      it('Has a Number component', async () => expect(await page.$('.cog input[type="text"]')).not.to.be.null)
+      it('Has a Null component', async () => expect(await page.$('.cog input[type="text"]')).not.to.be.null)
 
       describe('Input is valid', () => {
         before(async () => {
@@ -402,9 +402,9 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           const input = await page.$('.cog input[type="text"]')
           await input.click({ clickCount: 3 })
-          await page.type('.cog input[type="text"]', '1')
+          await page.type('.cog input[type="text"]', 'null')
 
-          await page.screenshot({ path: '.screenshots/number-all-of-2.png' })
+          await page.screenshot({ path: '.screenshots/null-all-of-2.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -413,7 +413,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-all-of-3.png' })
+          await page.screenshot({ path: '.screenshots/null-all-of-3.png' })
         })
 
         it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(ROUTE))
@@ -432,7 +432,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
           await page.goto(ROUTE, { waitUntil: 'load' })
           await page.waitForTimeout(ROUTE_GRACE)
 
-          await page.screenshot({ path: '.screenshots/number-all-of-4.png' })
+          await page.screenshot({ path: '.screenshots/null-all-of-4.png' })
 
           await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
@@ -440,7 +440,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
           await input.click({ clickCount: 3 })
           await page.type('.cog input[type="text"]', 'string')
 
-          await page.screenshot({ path: '.screenshots/number-all-of-5.png' })
+          await page.screenshot({ path: '.screenshots/null-all-of-5.png' })
 
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -449,7 +449,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
-          await page.screenshot({ path: '.screenshots/number-all-of-6.png' })
+          await page.screenshot({ path: '.screenshots/null-all-of-6.png' })
         })
 
         it('Returns to the same url', async () => expect(await getLocationHref(page)).to.equal(ROUTE))
@@ -471,7 +471,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
         await page.goto(DEBARK, { waitUntil: 'load' })
         await page.waitForTimeout(DEBARK_GRACE)
 
-        await page.screenshot({ path: '.screenshots/debark-number.png' })
+        await page.screenshot({ path: '.screenshots/debark-null.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Debark'))
@@ -479,13 +479,13 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
       it('Has a <button />', async () => expect(await page.$eval('form button[type="submit"]', getTextContent)).to.equal('Continue'))
 
       describe('Summary', () => {
-        describe('Number - Number', () => {
-          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(1) h2', getTextContent)).to.equal('Number'))
+        describe('Null - Null', () => {
+          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(1) h2', getTextContent)).to.equal('Null'))
 
           it('Has a <dl />', async () => {
-            expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dt', getTextContent)).to.equal('Number')
+            expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dt', getTextContent)).to.equal('Null')
 
-            expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dd', getTextContent)).to.equal('1')
+            expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dd', getTextContent)).to.equal('null')
           })
 
           describe('Change', () => {
@@ -495,15 +495,15 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
               await page.click('.sprocket:nth-of-type(1) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-number-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-change-1.png' })
 
               await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
               const input = await page.$('.cog input[type="text"]')
               await input.click({ clickCount: 3 })
-              await page.type('.cog input[type="text"]', '2')
+              await page.type('.cog input[type="text"]', 'null')
 
-              await page.screenshot({ path: '.screenshots/summary-number-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -512,26 +512,26 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-change-3.png' })
             })
 
-            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(1) h2', getTextContent)).to.equal('Number'))
+            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(1) h2', getTextContent)).to.equal('Null'))
 
             it('Has a <dl />', async () => {
-              expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dt', getTextContent)).to.equal('Number')
+              expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dt', getTextContent)).to.equal('Null')
 
-              expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dd', getTextContent)).to.equal('2')
+              expect(await page.$eval('.sprocket:nth-of-type(1) h2 + dl dd', getTextContent)).to.equal('null')
             })
           })
         })
 
-        describe('Number - Number (Enum)', () => {
-          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(2) h2', getTextContent)).to.equal('Number (Enum)'))
+        describe('Null - Null (Enum)', () => {
+          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(2) h2', getTextContent)).to.equal('Null (Enum)'))
 
           it('Has a <dl />', async () => {
-            expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dt', getTextContent)).to.equal('Number (Enum)')
+            expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dt', getTextContent)).to.equal('Null (Enum)')
 
-            expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dd', getTextContent)).to.equal('2')
+            expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dd', getTextContent)).to.equal('null')
           })
 
           describe('Change', () => {
@@ -541,13 +541,13 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
               await page.click('.sprocket:nth-of-type(2) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-number-enum-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-enum-change-1.png' })
 
-              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="2"]').scrollIntoView() })
+              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-              await page.click('.cog input[type="radio"][value="2"]')
+              await page.click('.cog input[type="radio"][value="0"]')
 
-              await page.screenshot({ path: '.screenshots/summary-number-enum-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-enum-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -556,26 +556,26 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-enum-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-enum-change-3.png' })
             })
 
-            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(2) h2', getTextContent)).to.equal('Number (Enum)'))
+            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(2) h2', getTextContent)).to.equal('Null (Enum)'))
 
             it('Has a <dl />', async () => {
-              expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dt', getTextContent)).to.equal('Number (Enum)')
+              expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dt', getTextContent)).to.equal('Null (Enum)')
 
-              expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dd', getTextContent)).to.equal('3')
+              expect(await page.$eval('.sprocket:nth-of-type(2) h2 + dl dd', getTextContent)).to.equal('null')
             })
           })
         })
 
-        describe('Number - Number (Any Of)', () => {
-          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Number (Any Of)'))
+        describe('Null - Null (Any Of)', () => {
+          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Null (Any Of)'))
 
           it('Has a <dl />', async () => {
-            expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dt', getTextContent)).to.equal('Number (Any Of)')
+            expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dt', getTextContent)).to.equal('Null (Any Of)')
 
-            expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dd', getTextContent)).to.equal('Two')
+            expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dd', getTextContent)).to.equal('Null')
           })
 
           describe('Change', () => {
@@ -585,13 +585,13 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
               await page.click('.sprocket:nth-of-type(3) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-number-any-of-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-any-of-change-1.png' })
 
-              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="2"]').scrollIntoView() })
+              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-              await page.click('.cog input[type="radio"][value="2"]')
+              await page.click('.cog input[type="radio"][value="0"]')
 
-              await page.screenshot({ path: '.screenshots/summary-number-any-of-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-any-of-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -600,26 +600,26 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-any-of-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-any-of-change-3.png' })
             })
 
-            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Number (Any Of)'))
+            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(3) h2', getTextContent)).to.equal('Null (Any Of)'))
 
             it('Has a <dl />', async () => {
-              expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dt', getTextContent)).to.equal('Number (Any Of)')
+              expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dt', getTextContent)).to.equal('Null (Any Of)')
 
-              expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dd', getTextContent)).to.equal('Three')
+              expect(await page.$eval('.sprocket:nth-of-type(3) h2 + dl dd', getTextContent)).to.equal('Null')
             })
           })
         })
 
-        describe('Number - Number (One Of)', () => {
-          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(4) h2', getTextContent)).to.equal('Number (One Of)'))
+        describe('Null - Null (One Of)', () => {
+          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(4) h2', getTextContent)).to.equal('Null (One Of)'))
 
           it('Has a <dl />', async () => {
-            expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dt', getTextContent)).to.equal('Number (One Of)')
+            expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dt', getTextContent)).to.equal('Null (One Of)')
 
-            expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dd', getTextContent)).to.equal('Two')
+            expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dd', getTextContent)).to.equal('Null')
           })
 
           describe('Change', () => {
@@ -629,13 +629,13 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
               await page.click('.sprocket:nth-of-type(4) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-number-one-of-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-one-of-change-1.png' })
 
-              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="2"]').scrollIntoView() })
+              await page.evaluate(() => { document.querySelector('.cog input[type="radio"][value="0"]').scrollIntoView() })
 
-              await page.click('.cog input[type="radio"][value="2"]')
+              await page.click('.cog input[type="radio"][value="0"]')
 
-              await page.screenshot({ path: '.screenshots/summary-number-one-of-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-one-of-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -644,26 +644,26 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-one-of-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-one-of-change-3.png' })
             })
 
-            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(4) h2', getTextContent)).to.equal('Number (One Of)'))
+            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(4) h2', getTextContent)).to.equal('Null (One Of)'))
 
             it('Has a <dl />', async () => {
-              expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dt', getTextContent)).to.equal('Number (One Of)')
+              expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dt', getTextContent)).to.equal('Null (One Of)')
 
-              expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dd', getTextContent)).to.equal('Three')
+              expect(await page.$eval('.sprocket:nth-of-type(4) h2 + dl dd', getTextContent)).to.equal('Null')
             })
           })
         })
 
-        describe('Number - Number (All Of)', () => {
-          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(5) h2', getTextContent)).to.equal('Number (All Of)'))
+        describe('Null - Null (All Of)', () => {
+          it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(5) h2', getTextContent)).to.equal('Null (All Of)'))
 
           it('Has a <dl />', async () => { // TODO - "(All Of)"?
-            expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dt', getTextContent)).to.equal('Number') // (All Of)')
+            expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dt', getTextContent)).to.equal('Null') // (All Of)')
 
-            expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dd', getTextContent)).to.equal('1')
+            expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dd', getTextContent)).to.equal('null')
           })
 
           describe('Change', () => {
@@ -673,15 +673,15 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
               await page.click('.sprocket:nth-of-type(5) h2 + dl dd a')
               await page.waitForSelector('.omega.resolved')
 
-              await page.screenshot({ path: '.screenshots/summary-number-all-of-change-1.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-all-of-change-1.png' })
 
               await page.evaluate(() => { document.querySelector('.cog input[type="text"]').scrollIntoView() })
 
               const input = await page.$('.cog input[type="text"]')
               await input.click({ clickCount: 3 })
-              await page.type('.cog input[type="text"]', '2')
+              await page.type('.cog input[type="text"]', 'null')
 
-              await page.screenshot({ path: '.screenshots/summary-number-all-of-change-2.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-all-of-change-2.png' })
 
               await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
@@ -690,15 +690,15 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
               await page.evaluate(() => { window.scrollTo(0, 0) })
 
-              await page.screenshot({ path: '.screenshots/summary-number-all-of-change-3.png' })
+              await page.screenshot({ path: '.screenshots/summary-null-all-of-change-3.png' })
             })
 
-            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(5) h2', getTextContent)).to.equal('Number (All Of)'))
+            it('Has an <h2 />', async () => expect(await page.$eval('.sprocket:nth-of-type(5) h2', getTextContent)).to.equal('Null (All Of)'))
 
             it('Has a <dl />', async () => {
-              expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dt', getTextContent)).to.equal('Number')
+              expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dt', getTextContent)).to.equal('Null')
 
-              expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dd', getTextContent)).to.equal('2')
+              expect(await page.$eval('.sprocket:nth-of-type(5) h2 + dl dd', getTextContent)).to.equal('null')
             })
           })
         })
@@ -712,7 +712,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
             await page.evaluate(() => { window.scrollTo(0, 0) })
 
-            await page.screenshot({ path: '.screenshots/summary-number-confirm.png' })
+            await page.screenshot({ path: '.screenshots/summary-null-confirm.png' })
           })
 
           it('Does not return to the same url', async () => expect(await getLocationHref(page)).not.to.equal(DEBARK))
@@ -726,7 +726,7 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
 
         await page.goto(CONFIRM, { waitUntil: 'load' })
 
-        await page.screenshot({ path: '.screenshots/confirm-number.png' })
+        await page.screenshot({ path: '.screenshots/confirm-null.png' })
       })
 
       it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Confirm'))

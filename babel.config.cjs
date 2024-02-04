@@ -20,7 +20,8 @@ function env () {
 
 const presets = [
   [
-    '@babel/env', {
+    '@babel/env',
+    {
       targets: {
         node: 'current'
       },
@@ -30,25 +31,10 @@ const presets = [
   ]
 ]
 
-const plugins = [
-  [
-    'module-resolver', {
-      root: ['.'],
-      cwd: 'babelrc',
-      alias: {
-        'zashiki-govuk-frontend-e2e': '.'
-      }
-    }
-  ]
-]
-
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
   return {
-    compact: true,
-    comments: false,
-    presets,
-    plugins
+    presets
   }
 }
