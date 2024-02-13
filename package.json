@@ -32,7 +32,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "chai": "^5.0.3",
+    "chai": "^5.1.0",
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "mocha": "^10.3.0",
