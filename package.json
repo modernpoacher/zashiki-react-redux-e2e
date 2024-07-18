@@ -8,7 +8,7 @@
   "author": {
     "name": "Jonathan Perry for Modern Poacher Limited",
     "email": "modernpoacher@modernpoacher.com",
-    "url": "http://modernpoacher.com"
+    "url": "https://modernpoacher.com"
   },
   "license": "UNLICENSED",
   "engines": {
@@ -19,32 +19,32 @@
     "url": "git@github.com/modernpoacher/zashiki-react-redux-e2e.git"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production mocha spec --recursive --verbose",
-    "string": "cross-env NODE_ENV=production mocha spec/string --recursive --verbose",
-    "number": "cross-env NODE_ENV=production mocha spec/number --recursive --verbose",
     "array": "cross-env NODE_ENV=production mocha spec/array --recursive --verbose",
-    "object": "cross-env NODE_ENV=production mocha spec/object --recursive --verbose",
     "boolean": "cross-env NODE_ENV=production mocha spec/boolean --recursive --verbose",
-    "null": "cross-env NODE_ENV=production mocha spec/null --recursive --verbose",
     "clean": "rimraf .screenshots/*.png",
     "lint": "eslint . --ext .mjs,.cjs",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install"
+    "null": "cross-env NODE_ENV=production mocha spec/null --recursive --verbose",
+    "number": "cross-env NODE_ENV=production mocha spec/number --recursive --verbose",
+    "object": "cross-env NODE_ENV=production mocha spec/object --recursive --verbose",
+    "prepare": "husky",
+    "start": "cross-env NODE_ENV=production mocha spec --recursive --verbose",
+    "string": "cross-env NODE_ENV=production mocha spec/string --recursive --verbose"
   },
   "dependencies": {
-    "chai": "^5.1.0",
+    "chai": "^5.1.1",
     "cross-env": "^7.0.3",
-    "debug": "^4.3.4",
-    "mocha": "^10.3.0",
-    "puppeteer": "^22.0.0"
+    "debug": "^4.3.5",
+    "mocha": "^10.6.0",
+    "puppeteer": "^22.13.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/eslint-parser": "^7.23.10",
-    "@babel/preset-env": "^7.23.9",
-    "core-js": "^3.36.0",
-    "eslint": "^8.56.0",
+    "@babel/core": "^7.24.9",
+    "@babel/eslint-parser": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "core-js": "^3.37.1",
+    "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
-    "husky": "^9.0.11"
+    "husky": "^9.1.0"
   }
 }
