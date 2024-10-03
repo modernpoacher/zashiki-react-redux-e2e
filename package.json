@@ -36,12 +36,12 @@
     "cross-env": "^7.0.3",
     "debug": "^4.3.7",
     "mocha": "^10.7.3",
-    "puppeteer": "^23.4.1"
+    "puppeteer": "^23.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@babel/preset-env": "^7.25.4",
+    "@babel/core": "^7.25.7",
+    "@babel/eslint-parser": "^7.25.7",
+    "@babel/preset-env": "^7.25.7",
     "core-js": "^3.38.1",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
