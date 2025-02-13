@@ -38,7 +38,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
   let browser
 
-  before(async () => { browser = await puppeteer.launch({ acceptInsecureCerts: true, headless: 'new' }) })
+  before(async () => { browser = await puppeteer.launch({ acceptInsecureCerts: true, headless: true }) })
 
   after(async () => await browser.close())
 
