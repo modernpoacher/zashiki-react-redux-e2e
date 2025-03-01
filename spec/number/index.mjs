@@ -26,16 +26,9 @@ const DEBARK = 'https://localhost:5001/debark-stage'
 const CONFIRM = 'https://localhost:5001/confirm-stage'
 
 describe('@modernpoacher/zashiki-react-redux/number', () => {
-  before(() => {
-    const {
-      env: {
-        DEBUG
-      }
-    } = process
-
-    if (DEBUG) debug.enable(DEBUG)
-  })
-
+  /**
+   *  @type {puppeteer.Browser}
+   */
   let browser
 
   before(async () => { browser = await puppeteer.launch({ acceptInsecureCerts: true, headless: true }) })
@@ -43,6 +36,9 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
   after(async () => await browser.close())
 
   describe('Embark', () => {
+    /**
+     *  @type {puppeteer.Page}
+     */
     let page
 
     before(async () => {
@@ -74,6 +70,9 @@ describe('@modernpoacher/zashiki-react-redux/number', () => {
   })
 
   describe('Number', () => {
+    /**
+     *  @type {puppeteer.Page}
+     */
     let page
 
     before(async () => {
