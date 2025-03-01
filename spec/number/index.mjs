@@ -12,9 +12,17 @@ log('`zashiki` is awake')
 
 const getTextContent = ({ textContent = '' }) => textContent.trim()
 
-const getLocation = async (page) => page.evaluate(() => location) // eslint-disable-line
+/**
+ * @param {puppeteer.Page} page
+ * @returns {Promise<Location>}
+ */
+const getLocation = async (page) => await page.evaluate(() => location) // eslint-disable-line
 
-const getLocationHref = async (page) => page.evaluate(() => location.href) // eslint-disable-line
+/**
+ * @param {puppeteer.Page} page
+ * @returns {Promise<string>}
+ */
+const getLocationHref = async (page) => await page.evaluate(() => location.href) // eslint-disable-line
 
 const EMBARK_GRACE = 500
 const ROUTE_GRACE = 500
