@@ -24,11 +24,6 @@ const getLocation = async (page) => await page.evaluate(() => location) // eslin
  */
 const getLocationHref = async (page) => await page.evaluate(() => location.href) // eslint-disable-line
 
-const EMBARK_GRACE = 500
-const ROUTE_GRACE = 500
-const DEBARK_GRACE = 500
-const SUBMIT_GRACE = 1000
-
 const EMBARK = 'https://localhost:5001/embark-stage'
 const DEBARK = 'https://localhost:5001/debark-stage'
 const CONFIRM = 'https://localhost:5001/confirm-stage'
@@ -53,7 +48,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
       page = await browser.newPage()
 
       await page.goto(EMBARK, { waitUntil: 'load' })
-      await page.waitForTimeout(EMBARK_GRACE)
+      /**
+       *  Current stage
+       */
+      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
     })
 
     it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Embark'))
@@ -87,7 +85,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
       page = await browser.newPage()
 
       await page.goto(EMBARK, { waitUntil: 'load' })
-      await page.waitForTimeout(EMBARK_GRACE)
+      /**
+       *  Current stage
+       */
+      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
 
       await page.screenshot({ path: '.screenshots/embark-string-1.png' })
 
@@ -98,7 +99,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         const array = Array.from(document.querySelectorAll('.cog input[type="radio"]'))
         const radio = array[index]
         if (radio) {
-          radio.scrollIntoView()
+          radio.scrollIntoView() // @ts-expect-error
           radio.click()
         }
       })
@@ -120,7 +121,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForTimeout(ROUTE_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(String)') // await waitForTimeout(ROUTE_GRACE)
 
         await page.screenshot({ path: '.screenshots/string-1.png' })
       })
@@ -142,7 +146,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          await page.waitForTimeout(SUBMIT_GRACE)
+          /**
+           *  Next stage
+           */
+          await page.waitForSelector('h1::-p-text(String (Enum))') // await waitForTimeout(SUBMIT_GRACE)
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -166,7 +173,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForTimeout(ROUTE_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(String (Enum))') // await waitForTimeout(ROUTE_GRACE)
 
         await page.screenshot({ path: '.screenshots/string-enum-1.png' })
       })
@@ -190,7 +200,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          await page.waitForTimeout(SUBMIT_GRACE)
+          /**
+           *  Next stage
+           */
+          await page.waitForSelector('h1::-p-text(String (Any Of))') // await waitForTimeout(SUBMIT_GRACE)
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -214,7 +227,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForTimeout(ROUTE_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(String (Any Of))') // await waitForTimeout(ROUTE_GRACE)
 
         await page.screenshot({ path: '.screenshots/string-any-of-1.png' })
       })
@@ -238,7 +254,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          await page.waitForTimeout(SUBMIT_GRACE)
+          /**
+           *  Next stage
+           */
+          await page.waitForSelector('h1::-p-text(String (One Of))') // await waitForTimeout(SUBMIT_GRACE)
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -262,7 +281,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForTimeout(ROUTE_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(String (One Of))') // await waitForTimeout(ROUTE_GRACE)
 
         await page.screenshot({ path: '.screenshots/string-one-of-1.png' })
       })
@@ -286,7 +308,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          await page.waitForTimeout(SUBMIT_GRACE)
+          /**
+           *  Next stage
+           */
+          await page.waitForSelector('h1::-p-text(String (All Of))') // await waitForTimeout(SUBMIT_GRACE)
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -310,7 +335,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForTimeout(ROUTE_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(String (All Of))') // await waitForTimeout(ROUTE_GRACE)
 
         await page.screenshot({ path: '.screenshots/string-all-of-1.png' })
       })
@@ -332,7 +360,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          await page.waitForTimeout(SUBMIT_GRACE)
+          /**
+           *  Next stage
+           */
+          await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(SUBMIT_GRACE)
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -356,7 +387,10 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         page = await browser.newPage()
 
         await page.goto(DEBARK, { waitUntil: 'load' })
-        await page.waitForTimeout(DEBARK_GRACE)
+        /**
+         *  Current stage
+         */
+        await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(DEBARK_GRACE)
 
         await page.screenshot({ path: '.screenshots/debark-string.png' })
       })
