@@ -88,7 +88,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
       /**
        *  Current stage
        */
-      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
+      await page.waitForSelector('h1::-p-text(Embark)')
 
       await page.screenshot({ path: '.screenshots/embark-array-1.png' })
 
@@ -121,7 +121,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
 
       before(async () => {
         await page.goto(ROUTE, { waitUntil: 'load' })
-        await page.waitForSelector('h1::-p-text(Array (String - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Array))')
 
         await page.screenshot({ path: '.screenshots/array-string-array-1.png' })
       })
@@ -144,7 +144,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -171,7 +171,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Object))')
 
         await page.screenshot({ path: '.screenshots/array-string-object-1.png' })
       })
@@ -196,7 +196,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -223,7 +223,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Array))')
 
         await page.screenshot({ path: '.screenshots/array-number-array-1.png' })
       })
@@ -233,7 +233,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-number-array-7.png' })
 
@@ -251,7 +251,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Object))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Object))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -302,7 +302,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Array))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Array))')
 
           await page.screenshot({ path: '.screenshots/array-number-array-4.png' })
 
@@ -320,7 +320,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -347,7 +347,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Object))')
 
         await page.screenshot({ path: '.screenshots/array-number-object-1.png' })
       })
@@ -357,7 +357,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-number-object-7.png' })
 
@@ -375,7 +375,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Array - Array))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Array - Array))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -400,7 +400,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Array - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Array - Array))')
 
           await page.screenshot({ path: '.screenshots/wut-6.png' })
 
@@ -426,7 +426,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Object))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Object))')
 
           await page.screenshot({ path: '.screenshots/array-number-object-4.png' })
 
@@ -444,7 +444,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -471,7 +471,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Array - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Array - Array))')
 
         await page.screenshot({ path: '.screenshots/array-array-array-1.png' })
       })
@@ -483,7 +483,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-array-array-7.png' })
 
@@ -519,7 +519,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Array - Object))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Array - Object))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -572,7 +572,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Array - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Array - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -598,7 +598,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Array - Array))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Array - Array))')
 
           await page.screenshot({ path: '.screenshots/array-array-array-4.png' })
 
@@ -634,7 +634,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -661,7 +661,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Array - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Array - Object))')
 
         await page.screenshot({ path: '.screenshots/array-array-object-1.png' })
       })
@@ -673,7 +673,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-array-object-7.png' })
 
@@ -709,7 +709,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Object - Array))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Object - Array))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -762,7 +762,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Object - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Object - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -788,7 +788,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Array - Object))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Array - Object))')
 
           await page.screenshot({ path: '.screenshots/array-array-object-4.png' })
 
@@ -824,7 +824,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -851,7 +851,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Object - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Object - Array))')
 
         await page.screenshot({ path: '.screenshots/array-object-array-1.png' })
       })
@@ -863,7 +863,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-object-array-7.png' })
 
@@ -899,7 +899,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Object - Object))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Object - Object))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -952,7 +952,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Object - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Object - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -978,7 +978,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Object - Array))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Object - Array))')
 
           await page.screenshot({ path: '.screenshots/array-object-array-4.png' })
 
@@ -1014,7 +1014,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1041,7 +1041,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Object - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Object - Object))')
 
         await page.screenshot({ path: '.screenshots/array-object-object-1.png' })
       })
@@ -1053,7 +1053,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-object-object-7.png' })
 
@@ -1089,7 +1089,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Boolean - Array))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Boolean - Array))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1142,7 +1142,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Boolean - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Boolean - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1168,7 +1168,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Object - Object))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Object - Object))')
 
           await page.screenshot({ path: '.screenshots/array-object-object-4.png' })
 
@@ -1204,7 +1204,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1231,7 +1231,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Boolean - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Boolean - Array))')
 
         await page.screenshot({ path: '.screenshots/array-boolean-array-1.png' })
       })
@@ -1241,7 +1241,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-boolean-array-7.png' })
 
@@ -1259,7 +1259,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Boolean - Object))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Boolean - Object))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1286,7 +1286,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Boolean - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Boolean - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1310,7 +1310,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Boolean - Array))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Boolean - Array))')
 
           await page.screenshot({ path: '.screenshots/array-boolean-array-4.png' })
 
@@ -1328,7 +1328,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1355,7 +1355,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Boolean - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Boolean - Object))')
 
         await page.screenshot({ path: '.screenshots/array-boolean-object-1.png' })
       })
@@ -1365,7 +1365,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/array-boolean-object-7.png' })
 
@@ -1383,7 +1383,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Array))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Array))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1410,7 +1410,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Null - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Null - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1434,7 +1434,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Boolean - Object))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Boolean - Object))')
 
           await page.screenshot({ path: '.screenshots/array-boolean-object-4.png' })
 
@@ -1452,7 +1452,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1479,7 +1479,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Array))')
 
         await page.screenshot({ path: '.screenshots/array-null-array-1.png' })
       })
@@ -1489,7 +1489,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Array))')
 
         await page.screenshot({ path: '.screenshots/array-null-array-7.png' })
 
@@ -1507,7 +1507,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Object))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Object))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1534,7 +1534,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Null - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Null - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1558,7 +1558,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Null - Array))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Null - Array))')
 
           await page.screenshot({ path: '.screenshots/array-null-array-4.png' })
 
@@ -1576,7 +1576,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1603,7 +1603,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Object))')
 
         await page.screenshot({ path: '.screenshots/array-null-object-1.png' })
       })
@@ -1613,7 +1613,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Null - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Null - Object))')
 
         await page.screenshot({ path: '.screenshots/array-null-object-7.png' })
 
@@ -1631,7 +1631,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1656,7 +1656,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1680,7 +1680,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Null - Object))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Null - Object))')
 
           await page.screenshot({ path: '.screenshots/array-null-object-4.png' })
 
@@ -1698,7 +1698,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1725,7 +1725,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Enum - Array))')
 
         await page.screenshot({ path: '.screenshots/array-string-enum-array-1.png' })
       })
@@ -1752,7 +1752,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - Enum - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - Enum - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1779,7 +1779,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Enum - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Enum - Object))')
 
         await page.screenshot({ path: '.screenshots/array-string-enum-object-1.png' })
       })
@@ -1806,7 +1806,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - Any Of - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - Any Of - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1833,7 +1833,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Any Of - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Any Of - Array))')
 
         await page.screenshot({ path: '.screenshots/array-string-any-of-array-1.png' })
       })
@@ -1860,7 +1860,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - Any Of - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - Any Of - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1887,7 +1887,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - Any Of - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - Any Of - Object))')
 
         await page.screenshot({ path: '.screenshots/array-string-any-of-object-1.png' })
       })
@@ -1914,7 +1914,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - One Of - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - One Of - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1941,7 +1941,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - One Of - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - One Of - Array))')
 
         await page.screenshot({ path: '.screenshots/array-string-one-of-array-1.png' })
       })
@@ -1968,7 +1968,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (String - One Of - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (String - One Of - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -1995,7 +1995,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (String - One Of - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (String - One Of - Object))')
 
         await page.screenshot({ path: '.screenshots/array-string-one-of-object-1.png' })
       })
@@ -2022,7 +2022,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Enum - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Enum - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2076,7 +2076,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Enum - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Enum - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2103,7 +2103,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Enum - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Enum - Object))')
 
         await page.screenshot({ path: '.screenshots/array-number-enum-object-1.png' })
       })
@@ -2130,7 +2130,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2157,7 +2157,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Array))')
 
         await page.screenshot({ path: '.screenshots/array-number-any-of-array-1.png' })
       })
@@ -2184,7 +2184,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2211,7 +2211,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - Any Of - Object))')
 
         await page.screenshot({ path: '.screenshots/array-number-any-of-object-1.png' })
       })
@@ -2238,7 +2238,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - One Of - Array))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - One Of - Array))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2265,7 +2265,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - One Of - Array))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - One Of - Array))')
 
         await page.screenshot({ path: '.screenshots/array-number-one-of-array-1.png' })
       })
@@ -2292,7 +2292,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Array (Number - One Of - Object))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Array (Number - One Of - Object))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2319,7 +2319,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Array (Number - One Of - Object))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Array (Number - One Of - Object))')
 
         await page.screenshot({ path: '.screenshots/array-number-one-of-object-1.png' })
       })
@@ -2346,7 +2346,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Debark)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -2373,7 +2373,7 @@ describe('@modernpoacher/zashiki-react-redux/array', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(DEBARK_GRACE)
+        await page.waitForSelector('h1::-p-text(Debark)')
 
         await page.screenshot({ path: '.screenshots/debark-array.png' })
       })

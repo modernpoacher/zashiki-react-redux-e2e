@@ -51,7 +51,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
       /**
        *  Current stage
        */
-      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
+      await page.waitForSelector('h1::-p-text(Embark)')
     })
 
     it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Embark'))
@@ -88,7 +88,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
       /**
        *  Current stage
        */
-      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
+      await page.waitForSelector('h1::-p-text(Embark)')
 
       await page.screenshot({ path: '.screenshots/embark-string-1.png' })
 
@@ -124,7 +124,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(String)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(String)')
 
         await page.screenshot({ path: '.screenshots/string-1.png' })
       })
@@ -149,7 +149,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(String (Enum))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(String (Enum))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -176,7 +176,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(String (Enum))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(String (Enum))')
 
         await page.screenshot({ path: '.screenshots/string-enum-1.png' })
       })
@@ -203,7 +203,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(String (Any Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(String (Any Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -230,7 +230,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(String (Any Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(String (Any Of))')
 
         await page.screenshot({ path: '.screenshots/string-any-of-1.png' })
       })
@@ -257,7 +257,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(String (One Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(String (One Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -284,7 +284,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(String (One Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(String (One Of))')
 
         await page.screenshot({ path: '.screenshots/string-one-of-1.png' })
       })
@@ -311,7 +311,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(String (All Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(String (All Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -338,7 +338,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(String (All Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(String (All Of))')
 
         await page.screenshot({ path: '.screenshots/string-all-of-1.png' })
       })
@@ -363,7 +363,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Debark)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -390,7 +390,7 @@ describe('@modernpoacher/zashiki-react-redux/string', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(DEBARK_GRACE)
+        await page.waitForSelector('h1::-p-text(Debark)')
 
         await page.screenshot({ path: '.screenshots/debark-string.png' })
       })

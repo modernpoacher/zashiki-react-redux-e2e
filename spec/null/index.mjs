@@ -51,7 +51,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
       /**
        *  Current stage
        */
-      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
+      await page.waitForSelector('h1::-p-text(Embark)')
     })
 
     it('Has an <h1 />', async () => expect(await page.$eval('h1', getTextContent)).to.equal('Embark'))
@@ -88,7 +88,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
       /**
        *  Current stage
        */
-      await page.waitForSelector('h1::-p-text(Embark)') // await waitForTimeout(EMBARK_GRACE)
+      await page.waitForSelector('h1::-p-text(Embark)')
 
       await page.screenshot({ path: '.screenshots/embark-null-1.png' })
 
@@ -124,7 +124,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Null)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Null)')
 
         await page.screenshot({ path: '.screenshots/null-1.png' })
       })
@@ -134,7 +134,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h2::-p-text(There is a problem)')
 
         await page.screenshot({ path: '.screenshots/null-7.png' })
 
@@ -152,7 +152,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Null (Enum))') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Null (Enum))')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -203,7 +203,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Null)') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Null)')
 
           await page.screenshot({ path: '.screenshots/null-4.png' })
 
@@ -221,7 +221,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -275,7 +275,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Null (Any Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Null (Any Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -329,7 +329,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Null (One Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Null (One Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -356,7 +356,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Null (One Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Null (One Of))')
 
         await page.screenshot({ path: '.screenshots/null-one-of-1.png' })
       })
@@ -383,7 +383,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Null (All Of))') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Null (All Of))')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -410,7 +410,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Null (All Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Null (All Of))')
 
         await page.screenshot({ path: '.screenshots/null-all-of-1.png' })
       })
@@ -420,7 +420,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Null (All Of))') // await waitForTimeout(ROUTE_GRACE)
+        await page.waitForSelector('h1::-p-text(Null (All Of))')
 
         await page.screenshot({ path: '.screenshots/null-all-of-7.png' })
 
@@ -438,7 +438,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Next stage
          */
-        await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(SUBMIT_GRACE)
+        await page.waitForSelector('h1::-p-text(Debark)')
 
         await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -465,7 +465,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Next stage
            */
-          await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h1::-p-text(Debark)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -489,7 +489,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h1::-p-text(Null (All Of))') // await waitForTimeout(ROUTE_GRACE)
+          await page.waitForSelector('h1::-p-text(Null (All Of))')
 
           await page.screenshot({ path: '.screenshots/null-all-of-4.png' })
 
@@ -507,7 +507,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
           /**
            *  Current stage
            */
-          await page.waitForSelector('h2::-p-text(There is a problem)') // await waitForTimeout(SUBMIT_GRACE)
+          await page.waitForSelector('h2::-p-text(There is a problem)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
@@ -534,7 +534,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
         /**
          *  Current stage
          */
-        await page.waitForSelector('h1::-p-text(Debark)') // await waitForTimeout(DEBARK_GRACE)
+        await page.waitForSelector('h1::-p-text(Debark)')
 
         await page.screenshot({ path: '.screenshots/debark-null.png' })
       })
