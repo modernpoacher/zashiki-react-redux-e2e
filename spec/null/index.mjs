@@ -232,7 +232,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
 
         it('Has an error summary', async () => expect(await page.$('.sprocket.error-summary')).not.to.be.null)
 
-        xit('Has some error messages', async () => {
+        it('Has some error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf.above(0)
@@ -518,7 +518,7 @@ describe('@modernpoacher/zashiki-react-redux/null', () => {
 
         it('Has an error summary', async () => expect(await page.$('.sprocket.error-summary')).not.to.be.null)
 
-        xit('Has some error messages', async () => {
+        it('Has some error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf.above(0)

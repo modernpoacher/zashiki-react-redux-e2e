@@ -190,7 +190,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Does not have an error summary', async () => expect(await page.$('.sprocket.error-summary')).to.be.null)
 
-        xit('Does not have any error messages', async () => {
+        it('Does not have any error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf(0)
@@ -232,7 +232,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Has an error summary', async () => expect(await page.$('.sprocket.error-summary')).not.to.be.null)
 
-        xit('Has some error messages', async () => {
+        it('Has some error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf.above(0)
@@ -286,7 +286,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Does not have an error summary', async () => expect(await page.$('.sprocket.error-summary')).to.be.null)
 
-        xit('Does not have any error messages', async () => {
+        it('Does not have any error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf(0)
@@ -340,7 +340,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Does not have an error summary', async () => expect(await page.$('.sprocket.error-summary')).to.be.null)
 
-        xit('Does not have any error messages', async () => {
+        it('Does not have any error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf(0)
@@ -394,7 +394,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Does not have an error summary', async () => expect(await page.$('.sprocket.error-summary')).to.be.null)
 
-        xit('Does not have any error messages', async () => {
+        it('Does not have any error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf(0)
@@ -476,7 +476,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Does not have an error summary', async () => expect(await page.$('.sprocket.error-summary')).to.be.null)
 
-        xit('Does not have any error messages', async () => {
+        it('Does not have any error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf(0)
@@ -518,7 +518,7 @@ describe('@modernpoacher/zashiki-react-redux/boolean', () => {
 
         it('Has an error summary', async () => expect(await page.$('.sprocket.error-summary')).not.to.be.null)
 
-        xit('Has some error messages', async () => {
+        it('Has some error messages', async () => {
           const nodeList = await page.$$('.cog .error-message')
 
           return expect(nodeList).to.have.lengthOf.above(0)

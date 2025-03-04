@@ -1274,10 +1274,8 @@ describe('@modernpoacher/zashiki-react-redux/object', () => {
           await page.evaluate(() => { document.querySelector('form button[type="submit"]').scrollIntoView() })
 
           await page.click('form button[type="submit"]')
-          /**
-           *  Next stage
-           */
-          await page.waitForSelector('h1::-p-text(Object)')
+
+          await page.waitForSelector('h1::-p-text(Debark)')
 
           await page.evaluate(() => { window.scrollTo(0, 0) })
 
