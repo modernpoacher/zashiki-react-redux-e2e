@@ -42,7 +42,7 @@
     "@babel/core": "^7.26.9",
     "@babel/eslint-parser": "^7.26.8",
     "@babel/preset-env": "^7.26.9",
-    "@types/chai": "^5.0.1",
+    "@types/chai": "^5.2.0",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
     "@types/puppeteer": "^7.0.4",
