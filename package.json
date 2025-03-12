@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",
-    "@babel/eslint-parser": "^7.26.8",
+    "@babel/eslint-parser": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "@types/chai": "^5.2.0",
     "@types/debug": "^4.1.12",
