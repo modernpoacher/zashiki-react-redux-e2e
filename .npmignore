@@ -5,8 +5,6 @@
 .husky
 
 .editorconfig
-.eslintignore
-.eslintrc
 
 .gitattributes
 .gitignore
@@ -27,3 +25,9 @@
 config.env
 config.json
 config/server
+
+# ESLint
+eslint.*
+
+# Babel
+babel.*
