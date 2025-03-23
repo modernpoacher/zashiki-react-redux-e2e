@@ -22,7 +22,7 @@ const getLocation = async (page) => await page.evaluate(() => location) // eslin
  * @param {puppeteer.Page} page
  * @returns {Promise<string>}
  */
-const getLocationHref = async (page) => await page.evaluate(() => location.href) // eslint-disable-line
+const getLocationHref = async (page) => await page.evaluate(() => location.href)
 
 const EMBARK = 'https://localhost:5001/embark-stage'
 const DEBARK = 'https://localhost:5001/debark-stage'
