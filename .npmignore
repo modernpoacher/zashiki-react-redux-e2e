@@ -31,3 +31,6 @@ eslint.*
 
 # Babel
 babel.*
+
+# Screenshots
+.screenshots/*.png
