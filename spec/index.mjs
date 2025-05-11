@@ -1,12 +1,10 @@
-import debug from 'debug'
-
 import puppeteer from 'puppeteer'
 
 import {
   expect
 } from 'chai'
 
-import './debug.mjs'
+import debug from '#zashiki/debug'
 
 const log = debug('zashiki/e2e')
 

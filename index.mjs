@@ -1,4 +1,4 @@
-import debug from 'debug'
+import debug from './debug.mjs'
 
 const log = debug('zashiki/e2e')
 
