@@ -34,7 +34,7 @@
   "dependencies": {
     "chai": "^5.2.0",
     "cross-env": "^7.0.3",
-    "debug": "^4.4.0",
+    "debug": "^4.4.1",
     "mocha": "^11.2.2",
     "puppeteer": "^24.8.2"
   },
