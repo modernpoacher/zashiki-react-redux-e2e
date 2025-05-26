@@ -46,7 +46,7 @@
     "@types/mocha": "^10.0.10",
     "@types/puppeteer": "^7.0.4",
     "eslint": "^9.27.0",
-    "globals": "^16.1.0",
+    "globals": "^16.2.0",
     "husky": "^9.1.7"
   },
   "imports": {
