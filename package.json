@@ -36,7 +36,7 @@
     "cross-env": "^7.0.3",
     "debug": "^4.4.1",
     "mocha": "^11.4.0",
-    "puppeteer": "^24.9.0"
+    "puppeteer": "^24.10.0"
   },
   "devDependencies": {
     "@sequencemedia/eslint-config-standard": "^0.2.62",
