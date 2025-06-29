@@ -36,11 +36,11 @@
     "cross-env": "^7.0.3",
     "debug": "^4.4.1",
     "mocha": "^11.7.1",
-    "puppeteer": "^24.11.0"
+    "puppeteer": "^24.11.1"
   },
   "devDependencies": {
     "@sequencemedia/eslint-config-standard": "^0.2.69",
-    "@sequencemedia/eslint-config-typescript": "^0.1.111",
+    "@sequencemedia/eslint-config-typescript": "^0.1.112",
     "@types/chai": "^5.2.2",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
