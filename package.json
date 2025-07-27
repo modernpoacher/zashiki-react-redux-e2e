@@ -39,8 +39,8 @@
     "puppeteer": "^24.15.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.72",
-    "@sequencemedia/eslint-config-typescript": "^0.1.126",
+    "@sequencemedia/eslint-config-standard": "^0.2.73",
+    "@sequencemedia/eslint-config-typescript": "^0.1.127",
     "@types/chai": "^5.2.2",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
