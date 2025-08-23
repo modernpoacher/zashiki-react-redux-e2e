@@ -32,20 +32,20 @@
     "string": "cross-env NODE_ENV=production mocha spec/string --recursive --verbose"
   },
   "dependencies": {
-    "chai": "^5.2.1",
+    "chai": "^6.0.1",
     "cross-env": "^10.0.0",
     "debug": "^4.4.1",
     "mocha": "^11.7.1",
-    "puppeteer": "^24.15.0"
+    "puppeteer": "^24.17.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.75",
-    "@sequencemedia/eslint-config-typescript": "^0.1.131",
+    "@sequencemedia/eslint-config-standard": "^0.2.76",
+    "@sequencemedia/eslint-config-typescript": "^0.1.132",
     "@types/chai": "^5.2.2",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
     "@types/puppeteer": "^7.0.4",
-    "eslint": "^9.32.0",
+    "eslint": "^9.34.0",
     "globals": "^16.3.0",
     "husky": "^9.1.7"
   },
