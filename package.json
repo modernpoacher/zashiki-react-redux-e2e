@@ -35,12 +35,12 @@
     "chai": "^6.2.0",
     "cross-env": "^10.1.0",
     "debug": "^4.4.3",
-    "mocha": "^11.7.3",
-    "puppeteer": "^24.22.3"
+    "mocha": "^11.7.4",
+    "puppeteer": "^24.23.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.86",
-    "@sequencemedia/eslint-config-typescript": "^0.1.147",
+    "@sequencemedia/eslint-config-standard": "^0.2.87",
+    "@sequencemedia/eslint-config-typescript": "^0.1.148",
     "@types/chai": "^5.2.2",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
