@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@sequencemedia/eslint-config-standard": "^0.2.90",
-    "@sequencemedia/eslint-config-typescript": "^0.1.154",
+    "@sequencemedia/eslint-config-typescript": "^0.1.155",
     "@types/chai": "^5.2.2",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.10",
