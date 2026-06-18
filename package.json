@@ -27,7 +27,7 @@
     "null": "cross-env NODE_ENV=production mocha spec/null --recursive --verbose",
     "number": "cross-env NODE_ENV=production mocha spec/number --recursive --verbose",
     "object": "cross-env NODE_ENV=production mocha spec/object --recursive --verbose",
-    "prepare": "husky",
+    "prepare": "node husky.mjs",
     "start": "cross-env NODE_ENV=production mocha spec --recursive --verbose",
     "string": "cross-env NODE_ENV=production mocha spec/string --recursive --verbose"
   },
