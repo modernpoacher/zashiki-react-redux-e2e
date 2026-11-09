@@ -31,6 +31,9 @@
     "start": "cross-env NODE_ENV=production mocha spec --recursive --verbose",
     "string": "cross-env NODE_ENV=production mocha spec/string --recursive --verbose"
   },
+  "allowScripts": {
+    "puppeteer@25.16.0": true
+  },
   "dependencies": {
     "chai": "^6.3.0",
     "cross-env": "^10.1.0",
@@ -51,8 +54,5 @@
   },
   "imports": {
     "#zashiki/debug": "./debug.mjs"
-  },
-  "allowScripts": {
-    "puppeteer@25.16.0": true
   }
 }
