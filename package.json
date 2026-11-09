@@ -51,5 +51,8 @@
   },
   "imports": {
     "#zashiki/debug": "./debug.mjs"
+  },
+  "allowScripts": {
+    "puppeteer@25.16.0": true
   }
 }
